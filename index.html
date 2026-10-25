@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KG Dev Studio — Web Development &amp; Digital Solutions</title>
+  <meta name="description"
+    content="KG Dev Studio builds modern, fast and secure websites, plus business automation, monitoring systems and custom web apps.">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Manrope:wght@400;500;600;700&family=Caveat:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/tech.css">
+  <link rel="stylesheet" href="css/cases.css">
+  <link rel="stylesheet" href="css/flows.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+  <div id="prog"></div>
+  <header>
+    <div class="w bar">
+      <a class="logo" href="#home" data-go="home" aria-label="KG Dev Studio home"><img
+          src="assets/img-1.png"
+          alt=""><span>KG DEV STUDIO<small>WEB DEVELOPMENT · DIGITAL SOLUTIONS</small></span></a>
+      <nav id="nv" aria-label="Main"><a href="#home" data-go="home">Home</a><a href="#packages"
+          data-go="packages">Packages</a><a href="#projects" data-go="projects">Projects</a><a href="#contact"
+          data-go="contact">Contact</a></nav>
+      <div class="tools"><button id="mn" aria-label="Open menu" aria-expanded="false" aria-controls="nv">☰</button><button id="th" aria-label="Switch light and dark theme">◐</button><a class="btn pri"
+          href="#contact" data-go="contact">Get a quote</a></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="view on" id="v-home">
+      <div class="hero">
+        <canvas id="net" aria-hidden="true"></canvas>
+        <div class="w">
+          <div>
+            <span class="sc">Your Website. Our Expertise.</span>
+            <h1>Websites that help your business <span class="gt">grow.</span></h1>
+            <p class="rot" aria-live="off">We build <b id="rot"></b><i class="caret"></i></p>
+            <p class="l">KG Dev Studio builds modern, fast and secure websites, and the automation and monitoring systems that keep your business running.</p>
+            <div class="cta"><a class="btn pri" href="#packages" data-go="packages">Explore packages</a><a
+                class="btn out" href="#projects" data-go="projects">See projects done</a></div>
+            <div class="pills">
+              <span>MODERN</span><span>·</span><span>FAST</span><span>·</span><span>SECURE</span><span>·</span><span>PROFESSIONAL</span>
+            </div>
+          </div>
+          <div class="hv">
+            <img src="assets/img-2.jpg" alt="Website shown on laptop, tablet and phone">
+            <div class="chip c1"><i></i><span>Uptime monitor<small>All systems operational</small></span></div>
+            <div class="chip c2"><i></i><span>Automation<small>Workflows running</small></span></div>
+            <div class="chip c3"><i></i><span>Site deployed<small>SSL secured</small></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="w">
+          <div class="stat"><b data-stat="pk" data-to="8">0</b><span>Packages &amp; services</span></div>
+          <div class="stat"><b data-stat="pj" data-to="4">0</b><span>Live projects</span></div>
+          <div class="stat"><b data-stat="sp" data-to="60" data-suf="">0</b><span>Days of free support, up to</span></div>
+          <div class="stat"><b data-stat="rp" data-to="1">0</b><span>Business day to reply</span></div>
+        </div>
+      </div>
+      <div class="mq" aria-hidden="true"><div id="mqt"></div></div>
+      <section>
+        <div class="w">
+          <div class="hd">
+            <h2>Pick the package that fits.</h2>
+            <p>Websites, automation, monitoring and custom apps, each with clear scope and support. Not sure which? We will help you choose.</p>
+          </div>
+          <div class="tz" id="tz"></div>
+        </div>
+      </section>
+
+      <section class="work" id="auto">
+        <div class="w">
+          <div class="hd">
+            <h2>Automation work we have done.</h2>
+            <p>Real workflows that replaced manual tracking, monitoring and restarts with systems that run on their own.</p>
+          </div>
+          <div class="au" id="au"></div>
+          <div class="more"><a class="btn out" href="https://villaemm.kgdevst.com/projects/" target="_blank" rel="noopener noreferrer">View full case studies</a></div>
+        </div>
+      </section>
+
+      <section class="flows" id="flows">
+        <div class="w">
+          <div class="hd">
+            <h2>See how the automation runs.</h2>
+            <p>Step-by-step flowcharts of our Power Automate flows and recovery scripts. Choose a scenario and watch the workflow execute.</p>
+          </div>
+          <div class="tabs" id="fw-tabs"></div>
+          <div class="fw" id="fw">
+            <div class="fw-bar"><button class="fw-b" id="fw-play">❚❚ Pause</button><button class="fw-b" id="fw-step">Next step</button><button class="fw-b" id="fw-re">Restart</button><span class="sp"></span><span id="fw-sc" style="display:flex;gap:8px;flex-wrap:wrap"></span></div>
+            <div class="fw-scroll"><div class="fw-chart" id="fw-chart"></div></div>
+            <div class="fw-now" id="fw-now" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="dash" id="dash">
+        <div class="w">
+          <div class="hd">
+            <h2>Inside the dashboard.</h2>
+            <p>An animated walkthrough of the Power BI training compliance report. Names and figures shown are illustrative sample data.</p>
+          </div>
+          <div class="tabs" id="db-tabs"></div>
+          <div class="db" id="db"><div class="db-top"><b>TRAINING COMPLIANCE &amp; ANALYTICS</b><span>SAMPLE DATA</span></div><div class="db-body" id="db-body"></div></div>
+        </div>
+      </section>
+
+      <section class="how">
+        <div class="w">
+          <div class="hd">
+            <h2>From idea to always-on.</h2>
+            <p>One team handles the build, the automation and the monitoring, so nothing falls through the cracks.</p>
+          </div>
+          <div class="pro">
+            <ol class="steps">
+              <li class="step" style="--i:0"><i>01</i><div><h3>Discover</h3><p>We learn your business, your goals and the manual work slowing you down.</p></div></li>
+              <li class="step" style="--i:1"><i>02</i><div><h3>Design</h3><p>A clean, mobile-first layout and a clear plan for every workflow.</p></div></li>
+              <li class="step" style="--i:2"><i>03</i><div><h3>Build</h3><p>Fast, secure development with SEO, SSL and backups covered.</p></div></li>
+              <li class="step" style="--i:3"><i>04</i><div><h3>Automate</h3><p>Forms, emails, bookings and reports connected so they run by themselves.</p></div></li>
+              <li class="step" style="--i:4"><i>05</i><div><h3>Monitor</h3><p>Uptime and speed checks with instant alerts, plus ongoing support.</p></div></li>
+            </ol>
+            <div>
+              <div class="term" role="img" aria-label="Animated terminal showing a site being deployed">
+                <div class="tb"><i></i><i></i><i></i><span>kg-dev-studio · deploy</span></div>
+                <pre id="term"></pre>
+              </div>
+              <div class="box mon">
+                <div class="row"><span class="k">LIVE STATUS · DEMO PREVIEW</span><span class="pill"><i></i>Operational</span></div>
+                <div class="spark" id="spark" aria-hidden="true"></div>
+                <div class="row"><div class="ms"><span id="ms">120</span> <small>ms response</small></div></div>
+                <div class="svc" style="margin-top:14px"><span><i></i>Website</span><span><i></i>Automation</span><span><i></i>Alerts</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="view" id="v-packages">
+      <div class="ph">
+        <div class="w"><span class="sc">Packages &amp; services</span>
+          <h2>Choose your package</h2>
+          <p>From websites to automation and monitoring, every package is built secure and mobile-friendly. Request a quote and we will tailor the final scope to
+            your needs.</p>
+        </div>
+      </div>
+      <section style="padding-top:56px">
+        <div class="w">
+          <div class="tabs" role="tablist" id="tabs"></div>
+          <div class="pn" id="pn"></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="view" id="v-projects">
+      <div class="ph">
+        <div class="w"><span class="sc">Projects done</span>
+          <h2>Projects we have built</h2>
+          <p>Live websites and digital tools, from one-page portfolios and online stores to automation and monitoring builds. Tap a project to visit it.</p>
+        </div>
+      </div>
+      <section style="padding-top:56px">
+        <div class="w">
+          <div class="fl tabs" id="fl"></div>
+          <div class="pj" id="pj"></div>
+          <div class="band">
+            <div>
+              <h3>Want your project on this page?</h3>
+              <p>Tell us about your project and we will send a quote.</p>
+            </div><a class="btn pri" href="#contact" data-go="contact">Start your project</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="contact">
+      <div class="w ct">
+        <div class="i">
+          <h2>Let’s build your online presence.</h2>
+          <p>Share a few details and we will reply with questions or a quote, usually within one business day.</p>
+          <dl>
+            <dt>EMAIL</dt>
+            <dd><a href="mailto:kgdevstudio@gmail.com">kgdevstudio@gmail.com</a></dd>
+            <dt>SERVICES</dt>
+            <dd>Web development · Automation · Monitoring · Digital solutions</dd>
+          </dl>
+          <div class="chan">
+            <a class="wa" href="tel:+639612192189"><i><svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.56 3.57.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.19 2.45.56 3.57a1 1 0 0 1-.25 1.02l-2.19 2.2z"/></svg></i><span>Call me directly<small>Call +63 961 219 2189</small></span></a>
+            <a class="fb" href="https://www.facebook.com/profile.php?id=61595069246649" target="_blank" rel="noopener noreferrer"><i><svg viewBox="0 0 24 24"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.03 3.66 9.2 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22C18.34 21.27 22 17.1 22 12.07z"/></svg></i><span>Message our Facebook page<small>facebook.com/kgdevstudio</small></span></a>
+          </div>
+        </div>
+        <form id="f" action="https://formspree.io/f/mrpenvga" method="POST">
+          <input type="hidden" name="_subject" value="Website quote request">
+          <input type="hidden" name="_template" value="table">
+          <div class="two"><label>Name<input name="Name" required autocomplete="name"></label><label>Email or phone<input
+                name="Email or phone" required></label></div>
+          <label>Package<select name="Package" id="sel"></select></label>
+          <label>About your project<textarea name="About your project" required
+              placeholder="What is your business, and what should the website do?"></textarea></label>
+          <button class="btn pri" type="submit">Request a quote</button>
+          <div id="ok" role="status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="w"><span>© <span id="yr"></span> KG Dev Studio. All rights reserved.</span><span>Modern · Fast · Secure
+        · Professional</span></div>
+  </footer>
+
+  
+  <div class="fab">
+    <a class="fb" href="https://www.facebook.com/kgdevstudio" target="_blank" rel="noopener noreferrer" aria-label="Facebook page"><span>Facebook</span><b><svg viewBox="0 0 24 24"><path d="M22 12.07C22 6.5 17.52 2 12 2S2 6.5 2 12.07c0 5.03 3.66 9.2 8.44 9.93v-7.03H7.9v-2.9h2.54V9.85c0-2.52 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.77l-.44 2.9h-2.33V22C18.34 21.27 22 17.1 22 12.07z"/></svg></b></a>
+    <a class="wa" href="https://wa.me/639000000000?text=Hi%20KG%20Dev%20Studio%2C%20I%27d%20like%20to%20ask%20about%20a%20website." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><span>WhatsApp</span><b><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.12c-.25.69-1.43 1.32-1.97 1.4-.5.08-1.12.11-1.8-.11-.41-.13-.94-.31-1.62-.6-2.85-1.23-4.71-4.1-4.85-4.29-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09.99-2.37.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.25.58.82 2 .89 2.15.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.17-.3.37-.42.5-.14.14-.28.3-.12.58.16.28.72 1.19 1.54 1.93 1.06.94 1.95 1.23 2.23 1.37.28.14.44.12.6-.07.17-.19.71-.83.9-1.11.19-.28.38-.23.64-.14.26.09 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.69-.18 1.38z"/></svg></b></a>
+  </div>
+  
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/flows.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+
+</html>
