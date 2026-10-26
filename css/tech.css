@@ -1,0 +1,146 @@
+/* KG Dev Studio — tech-themed components + their animations */
+
+/* ---------- keyframes ---------- */
+@keyframes blink { 50% { opacity: 0 } }
+@keyframes spin { to { transform: rotate(360deg) } }
+@keyframes draw { 0% { stroke-dashoffset: 100 } 50% { stroke-dashoffset: 0 } 100% { stroke-dashoffset: -100 } }
+@keyframes drawOnce { 0%, 10% { stroke-dashoffset: 30 } 50%, 85% { stroke-dashoffset: 0 } 100% { stroke-dashoffset: 30 } }
+@keyframes grow { 0%, 100% { transform: scaleY(.35) } 50% { transform: scaleY(1) } }
+@keyframes typeLn { 0% { transform: scaleX(0) } 55%, 85% { transform: scaleX(1) } 100% { transform: scaleX(0) } }
+@keyframes dropIn { 0% { transform: translateY(-14px); opacity: 0 } 40% { opacity: 1 } 75%, 100% { transform: translateY(8px); opacity: 0 } }
+@keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(52, 227, 155, .7) } 70%, 100% { box-shadow: 0 0 0 10px rgba(52, 227, 155, 0) } }
+@keyframes chipFloat { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+@keyframes marquee { to { transform: translateX(-50%) } }
+@keyframes travel { 0% { transform: translateX(0); opacity: 0 } 10%, 90% { opacity: 1 } 100% { transform: translateX(210px); opacity: 0 } }
+@keyframes flowY { 0% { background-position: 0 -100% } 100% { background-position: 0 200% } }
+@keyframes stepGlow { 0%, 18% { background: var(--g); color: #04122e; box-shadow: 0 0 0 8px rgba(47, 212, 255, .18) } 24%, 100% { background: var(--card); color: var(--ac); box-shadow: 0 0 0 0 rgba(47, 212, 255, 0) } }
+@keyframes scan { 0% { top: 0 } 100% { top: 100% } }
+
+/* ---------- hero: network canvas, typewriter, status chips ---------- */
+#net { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none }
+.hero .rot { font: 600 21px/1.4 var(--d); color: #dff1ff; margin: -6px 0 18px; min-height: 1.4em }
+.hero .rot b { background: linear-gradient(90deg, #2fd4ff, #6aa8ff); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700 }
+.caret { display: inline-block; width: 2px; height: 1.05em; background: var(--ac2); margin-left: 3px; vertical-align: -3px; animation: blink 1s steps(1) infinite }
+
+.hv { position: relative }
+.chip { position: absolute; display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 14px; background: rgba(7, 20, 52, .74); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, .16); color: #dff1ff; font: 700 13px var(--b); box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .7); animation: chipFloat 6s ease-in-out infinite; z-index: 2 }
+.chip i { width: 9px; height: 9px; border-radius: 50%; background: #34e39b; animation: ping 1.8s infinite }
+.chip small { display: block; font-weight: 500; color: #8fb2ee; font-size: 11px }
+.chip.c1 { top: 8%; left: -22px }
+.chip.c2 { bottom: 28%; right: -14px; animation-delay: -2s }
+.chip.c3 { bottom: -14px; left: 12%; animation-delay: -4s }
+
+/* ---------- stats ---------- */
+.stats { background: var(--card); border-bottom: 1px solid var(--line) }
+.stats .w { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding-top: 34px; padding-bottom: 34px }
+.stat b { display: block; font: 800 40px/1.1 var(--d); background: var(--g); -webkit-background-clip: text; background-clip: text; color: transparent }
+.stat span { color: var(--mut); font-size: 14px; font-weight: 600 }
+
+/* ---------- capability marquee ---------- */
+.mq { overflow: hidden; background: var(--navy); padding: 16px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent) }
+.mq div { display: flex; gap: 14px; width: max-content; animation: marquee 38s linear infinite }
+.mq:hover div { animation-play-state: paused }
+.mq span { font: 600 13px var(--b); letter-spacing: .14em; color: #9fe6ff; border: 1px solid rgba(159, 230, 255, .25); border-radius: 999px; padding: 7px 16px; white-space: nowrap }
+.mq span:before { content: "▸ "; color: var(--ac2) }
+
+/* ---------- animated service icons ---------- */
+.ic { width: 60px; height: 60px; color: var(--ac); flex: none }
+.ic svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; overflow: visible }
+.ic .a2 { stroke: var(--ac2) }
+.ic .fx { transform-box: fill-box; transform-origin: center }
+.ic .g1 { animation: spin 9s linear infinite }
+.ic .g2 { animation: spin 6s linear infinite reverse }
+.ic .ecg { stroke-dasharray: 100; animation: draw 2.6s linear infinite }
+.ic .bar { fill: currentColor; stroke: none; transform-box: fill-box; transform-origin: bottom; animation: grow 2.4s ease-in-out infinite }
+.ic .bar:nth-of-type(2) { animation-delay: .3s }
+.ic .bar:nth-of-type(3) { animation-delay: .6s }
+.ic .bar:nth-of-type(4) { animation-delay: .9s }
+.ic .ln { transform-box: fill-box; transform-origin: left; animation: typeLn 3.2s ease-in-out infinite }
+.ic .ln:nth-of-type(2) { animation-delay: .35s }
+.ic .ln:nth-of-type(3) { animation-delay: .7s }
+.ic .cur { fill: var(--ac2); stroke: none; animation: blink 1s steps(1) infinite }
+.ic .drop { fill: currentColor; stroke: none; animation: dropIn 2.2s ease-in infinite }
+.ic .tick { stroke-dasharray: 30; animation: drawOnce 3s ease-in-out infinite }
+.ic .ring { transform-box: fill-box; transform-origin: center; animation: ping2 2.4s ease-out infinite }
+@keyframes ping2 { 0% { transform: scale(.85); opacity: .8 } 100% { transform: scale(1.35); opacity: 0 } }
+
+/* teaser + panel header with icons */
+.tz .gl { grid-column: 1 / -1; font: 700 12px var(--b); letter-spacing: .2em; color: var(--ac); margin-top: 8px }
+.tz .gl:first-child { margin-top: 0 }
+.tabs .gl { flex-basis: 100%; font: 700 12px var(--b); letter-spacing: .2em; color: var(--mut); margin-top: 6px }
+.tc .ic { width: 54px; height: 54px; transition: transform .4s }
+.tc:hover .ic { transform: scale(1.12) rotate(-4deg) }
+.tc.tech .t { color: var(--ac2) }
+.bh { display: flex; gap: 20px; align-items: center; margin-bottom: 14px }
+.bh h3 { margin: 4px 0 0 }
+.bh .ic { width: 72px; height: 72px; background: var(--tint); border-radius: 18px; padding: 10px }
+
+/* ---------- how we work ---------- */
+.how { background: var(--bg) }
+.pro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 56px; align-items: start }
+.steps { list-style: none; margin: 0; padding: 0; position: relative; display: grid; gap: 30px }
+.steps:before { content: ""; position: absolute; left: 21px; top: 10px; bottom: 10px; width: 3px; border-radius: 3px; background: linear-gradient(180deg, transparent, var(--ac2), transparent) 0 0 / 100% 40% no-repeat, var(--line); animation: flowY 3.2s linear infinite }
+.step { display: flex; gap: 20px; position: relative }
+.step > i { flex: none; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font: 700 14px var(--d); font-style: normal; border: 1px solid var(--line); background: var(--card); color: var(--ac); animation: stepGlow 7.5s infinite; animation-delay: calc(var(--i) * 1.5s) }
+.step h3 { font-size: 19px; margin-bottom: 4px }
+.step p { color: var(--mut); font-size: 15px }
+
+.term { background: #050e24; border: 1px solid #183261; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(5, 14, 36, .8) }
+.term .tb { display: flex; gap: 7px; align-items: center; padding: 12px 16px; background: #0a1d47; font: 600 12px var(--b); color: #8fb2ee }
+.term .tb i { width: 11px; height: 11px; border-radius: 50%; background: #ff5f57 }
+.term .tb i:nth-child(2) { background: #febc2e }
+.term .tb i:nth-child(3) { background: #28c840 }
+.term .tb span { margin-left: 10px }
+.term pre { margin: 0; padding: 18px 20px; min-height: 196px; font: 500 14px/1.75 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #bfe3ff; white-space: pre-wrap }
+.term .ok { color: #34e39b }
+.term .cm { color: #6f86b3 }
+.term .pm { color: #2fd4ff }
+
+.mon { margin-top: 18px; padding: 24px; position: relative; overflow: hidden }
+.mon:after { content: ""; position: absolute; left: 0; right: 0; height: 60px; top: 0; background: linear-gradient(180deg, transparent, rgba(47, 212, 255, .12), transparent); animation: scan 4s linear infinite; pointer-events: none }
+.mon .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap }
+.mon .pill { display: inline-flex; align-items: center; gap: 8px; font: 700 12px var(--b); color: #0f9d63; background: rgba(52, 227, 155, .14); padding: 5px 12px; border-radius: 999px }
+.mon .pill i { width: 8px; height: 8px; border-radius: 50%; background: #34e39b; animation: ping 1.8s infinite }
+.mon .ms { font: 800 26px var(--d) }
+.mon .ms small { font: 600 13px var(--b); color: var(--mut) }
+.spark { display: flex; align-items: flex-end; gap: 4px; height: 70px; margin: 16px 0 12px }
+.spark i { flex: 1; background: var(--g); border-radius: 3px 3px 0 0; min-height: 4px; transition: height .6s }
+.svc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; font: 600 13px var(--b); color: var(--mut) }
+.svc span { display: flex; align-items: center; gap: 8px }
+.svc i { width: 8px; height: 8px; border-radius: 50%; background: #34e39b; animation: ping 1.8s infinite }
+.svc span:nth-child(2) i { animation-delay: .5s }
+.svc span:nth-child(3) i { animation-delay: 1s }
+
+/* ---------- project card visuals ---------- */
+.pc .vis { width: 72%; max-width: 300px; position: relative; z-index: 1 }
+.pc .vis svg { width: 100%; height: auto; fill: none; stroke: rgba(255, 255, 255, .92); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; overflow: visible }
+.pc .vis .nd { fill: rgba(255, 255, 255, .15) }
+.pc .vis .pk { fill: #fff; stroke: none; animation: travel 3s linear infinite }
+.pc .vis .pk:nth-of-type(2) { animation-delay: 1s }
+.pc .vis .pk:nth-of-type(3) { animation-delay: 2s }
+.pc .vis .ecg { stroke-dasharray: 100; animation: draw 2.8s linear infinite }
+.pc .vis .dt { fill: #34e39b; stroke: none; animation: blink 1.2s steps(1) infinite }
+.sm { display: inline-block; margin-top: 20px; font: 700 13px var(--b); color: var(--mut) }
+.pc.sample { border-style: dashed }
+
+/* ---------- responsive ---------- */
+@media (max-width: 980px) {
+  .pro { grid-template-columns: 1fr }
+  .stats .w { grid-template-columns: 1fr 1fr }
+  .chip.c1 { left: 8px }
+  .chip.c2 { right: 8px }
+}
+@media (max-width: 620px) {
+  .svc { grid-template-columns: 1fr }
+  .bh { flex-direction: column; align-items: flex-start }
+  .hero .rot { font-size: 18px }
+  .stat b { font-size: 32px }
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .ic .ecg, .pc .vis .ecg { stroke-dashoffset: 0 }
+  .ic .tick { stroke-dashoffset: 0 }
+  .mq div { animation: none; flex-wrap: wrap; width: auto; justify-content: center }
+  .mq span:nth-child(n+10) { display: none }
+}

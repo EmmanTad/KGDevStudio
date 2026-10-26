@@ -1,0 +1,68 @@
+/* ===== Animations & polish ===== */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+    @keyframes viewIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+    @keyframes blob1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-60px,50px) scale(1.15)}}
+    @keyframes blob2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(70px,-40px) scale(1.2)}}
+    @keyframes shimmer{to{background-position:200% center}}
+    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+    @keyframes pulseFb{0%{box-shadow:0 0 0 0 rgba(24,119,242,.55)}70%{box-shadow:0 0 0 18px rgba(24,119,242,0)}100%{box-shadow:0 0 0 0 rgba(24,119,242,0)}}
+    @keyframes sweep{from{left:-70%}to{left:130%}}
+    @keyframes pop{from{opacity:0;transform:scale(.4) translateY(20px)}to{opacity:1;transform:none}}
+
+    .view.on{animation:viewIn .55s cubic-bezier(.2,.7,.2,1)}
+    .hero{position:relative;isolation:isolate}
+    .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(70px);z-index:-1;pointer-events:none}
+    .hero::before{width:420px;height:420px;background:rgba(47,212,255,.28);top:-120px;left:-80px;animation:blob1 14s ease-in-out infinite}
+    .hero::after{width:480px;height:480px;background:rgba(26,107,255,.35);bottom:-180px;right:-100px;animation:blob2 17s ease-in-out infinite}
+    .hero .w>div:first-child>*{opacity:0;animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) forwards}
+    .hero .w>div:first-child>*:nth-child(1){animation-delay:.1s}
+    .hero .w>div:first-child>*:nth-child(2){animation-delay:.25s}
+    .hero .w>div:first-child>*:nth-child(3){animation-delay:.4s}
+    .hero .w>div:first-child>*:nth-child(4){animation-delay:.55s}
+    .hero .w>div:first-child>*:nth-child(5){animation-delay:.7s}
+    .hero .w>div:first-child>*:nth-child(6){animation-delay:.85s}
+    .hero .hv img{animation:fadeUp 1s .35s cubic-bezier(.2,.7,.2,1) both,floaty 7s 1.4s ease-in-out infinite;will-change:transform;transition:filter .4s}
+    .hero .hv img:hover{filter:drop-shadow(0 0 40px rgba(47,212,255,.45))}
+    .gt{background:linear-gradient(90deg,#2fd4ff,#6aa8ff,#2fd4ff,#6aa8ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 5s linear infinite}
+    .hero .sc{display:inline-block;background:linear-gradient(90deg,#2fd4ff,#fff,#2fd4ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fadeUp .8s .1s both,shimmer 6s linear infinite}
+    .pills span:nth-child(odd){transition:color .3s,transform .3s}
+    .pills span:nth-child(odd):hover{color:#fff;transform:translateY(-3px)}
+
+    .btn{position:relative;overflow:hidden}
+    .btn.pri::after{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 3.6s ease-in-out infinite}
+    .btn:active{transform:scale(.97)}
+
+    header{transition:box-shadow .3s,background .3s}
+    header.sd{box-shadow:0 10px 30px -12px rgba(0,0,0,.55);background:rgba(5,14,36,.92);backdrop-filter:blur(10px)}
+    #prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--g);z-index:70;transition:width .1s}
+
+    .rv{opacity:0;transform:translateY(32px) scale(.98);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}
+    .rv.in{opacity:1;transform:none}
+
+    .hd h2::after{content:"";display:block;width:64px;height:4px;border-radius:4px;background:var(--g);margin-top:14px}
+    .tc{position:relative;overflow:hidden}
+    .tc::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--g);transform:scaleX(0);transform-origin:left;transition:transform .45s}
+    .tc:hover::before{transform:scaleX(1)}
+    .tc:hover,.pc:hover{box-shadow:0 26px 50px -24px rgba(21,101,255,.45)}
+    .tc .go{transition:transform .3s}
+    .tc:hover .go{transform:translateX(6px)}
+    .pc .im::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.28),transparent 55%)}
+    .mk{transition:transform .5s}
+    .pc:hover .mk{transform:scale(1.08)}
+    .ft li{transition:transform .25s}
+    .ft li:hover{transform:translateX(4px)}
+    .box{transition:box-shadow .3s}
+    .box:hover{box-shadow:0 22px 44px -26px rgba(21,101,255,.4)}
+    .tab{transition:transform .2s,color .2s,border-color .2s}
+    .tab:hover{transform:translateY(-2px)}
+    .band{position:relative;overflow:hidden}
+    .band::before{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(47,212,255,.18);filter:blur(60px);right:-60px;top:-120px;animation:blob2 12s ease-in-out infinite}
+    .band>*{position:relative}
+
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important}
+  .rv{opacity:1;transform:none}
+  .hero .w>div:first-child>*{opacity:1}
+}

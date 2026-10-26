@@ -1,0 +1,25 @@
+/* KG Dev Studio — automation case studies */
+.work{background:var(--bg)}
+.au{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.ac{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:12px;transition:transform .3s,border-color .3s,box-shadow .3s}
+.ac:hover{transform:translateY(-5px);border-color:var(--ac);box-shadow:0 26px 50px -24px rgba(21,101,255,.45)}
+.ac-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.ac-k{font:700 11px var(--b);letter-spacing:.12em;color:var(--ac)}
+.ac-y{font:700 12px var(--b);color:var(--mut);padding:3px 10px;border-radius:99px;border:1px solid var(--line)}
+.ac h3{font:700 20px var(--d);margin:0;color:var(--ink)}
+.afl{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:14px;border-radius:14px;background:var(--tint)}
+.afl span{font:700 12px var(--b);color:var(--ink);padding:6px 12px;border-radius:99px;background:var(--card);border:1px solid var(--line);animation:caseStep 6s ease-in-out infinite;animation-delay:calc(var(--i)*1s)}
+.afl i{flex:0 1 28px;min-width:14px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac));background-size:200% 100%;animation:caseFlow 1.4s linear infinite}
+.ac-l{margin:0;color:var(--mut);font-size:15px;line-height:1.6}
+.ac-l b{display:block;font:700 11px var(--b);letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:2px}
+.ac-i{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ac-i li{font:600 13px var(--b);color:var(--ink);padding:6px 12px 6px 28px;border-radius:99px;background:var(--tint);position:relative}
+.ac-i li::before{content:"";position:absolute;left:11px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:#22c55e;animation:caseDot 2s infinite}
+.work .more{margin-top:30px;text-align:center}
+.tw{margin:0 0 22px;color:var(--mut);font-size:14px;line-height:1.7}
+.tw b{color:var(--ink)}
+@keyframes caseStep{0%,100%{border-color:var(--line);box-shadow:none;transform:none}8%,22%{border-color:var(--ac);box-shadow:0 0 14px rgba(21,101,255,.35);transform:translateY(-2px)}}
+@keyframes caseFlow{to{background-position:200% 0}}
+@keyframes caseDot{0%{box-shadow:0 0 0 0 rgba(34,197,94,.6)}70%,100%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
+@media(max-width:820px){.au{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.afl *,.ac-i li::before{animation:none!important}}
