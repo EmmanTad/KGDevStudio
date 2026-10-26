@@ -23,8 +23,8 @@ window.KG = {
     {
       k: 'ecom', g: 'site', ic: 'cart', n: 'Business E-Commerce Package', tag: 'BUSINESS',
       who: 'A complete website solution for small businesses ready to sell products online.',
-      t: '1–2 weeks', s: 'Daily backups, 60 days free support',
-      f: [['Up to 10 pages', 'With custom website design'], ['Full e-commerce features', 'WooCommerce setup, up to 20 product listings, shopping cart and checkout'], ['Payment gateway integration', 'PayPal, Stripe, GCash, Maya, bank transfer'], ['Free 1-year domain and hosting'], ['SEO and speed optimization'], ['Malware scanner and security', 'Plus free SSL certificate'], ['Migration support and free global CDN'], ['Daily backups, 60 days free support']],
+      t: '1–2 weeks', s: 'Daily backups, 30 days free support',
+      f: [['Up to 10 pages', 'With custom website design'], ['Full e-commerce features', 'WooCommerce setup, up to 20 product listings, shopping cart and checkout'], ['Payment gateway integration', 'PayPal, Stripe, GCash, Maya, bank transfer'], ['Free 1-year domain and hosting'], ['SEO and speed optimization'], ['Malware scanner and security', 'Plus free SSL certificate'], ['Migration support and free global CDN'], ['Daily backups, 30 days free support']],
       add: ['Extra page or section', 'Logo and branding touch-up', 'Monthly maintenance and content updates: text changes, image swaps and security checks']
     },
 
@@ -46,7 +46,7 @@ window.KG = {
     {
       k: 'webapp', g: 'tech', ic: 'dash', n: 'Web App & Dashboard', tag: 'CUSTOM BUILD',
       who: 'Custom tools built around your process: booking systems, inventory, admin panels and reporting dashboards.',
-      t: '2–6 weeks', s: 'Testing, deployment and 60 days support',
+      t: '2–6 weeks', s: 'Testing, deployment and 30 days support',
       f: [['Custom web application', 'Built around your workflow'], ['Admin dashboard', 'Manage data, users and content'], ['User login and roles', 'Secure access levels'], ['Database and API setup'], ['Charts and reports', 'Live numbers at a glance'], ['Booking, inventory or ordering modules'], ['Mobile-responsive interface'], ['Deployment and security hardening']]
     },
     {
